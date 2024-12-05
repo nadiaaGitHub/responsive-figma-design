@@ -1,6 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 
-export default function() {
+export default function data() {
  return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-16 bg-white">
     {/* Left Content */}
@@ -11,7 +12,7 @@ export default function() {
         100% your data
           {/* Yellow Brush Stroke */}
           <div>
-    <img src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+    <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
   </div>
         </span>
       </h1>
@@ -29,7 +30,7 @@ export default function() {
 
     {/* Right Placeholder Box */}
     <div className="md:w-1/2 mt-8 md:mt-0">
-        <img
+        <Image
           src="/images/DATA.png" 
           alt="Hero Image"
           className="w-full h-auto max-w-md mx-auto md:ml-8"

@@ -1,4 +1,5 @@
-
+import React from 'react'
+import Image from 'next/image';
 export default function HeroSection() {
   return (
     <section className="relative bg-blue-900 text-white py-16 md:py-24" style={{ backgroundImage: 'url(/images/hero-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -21,7 +22,7 @@ export default function HeroSection() {
 
         {/* Right Side Image */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-          <img
+          <Image
             src="/images/Image-container.png" 
             alt="Hero Image"
             className="w-full h-auto max-w-md mx-auto md:ml-8 shadow-xl"

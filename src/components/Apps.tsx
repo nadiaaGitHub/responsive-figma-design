@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 export default function Apps() {
   return (
@@ -6,7 +7,7 @@ export default function Apps() {
     <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
         {/* Right Side Image */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-        <img
+        <Image
           src="/images/Apps.png" 
           alt="Hero Image"
           className="w-full h-auto max-w-md mx-auto md:ml-8 "

@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 
-export default function HeroSection() {
+export default function yourwork() {
   return (
     <section className="relative bg-blue-800 py-20 text-white">
       {/* Background pattern */}
@@ -25,7 +26,7 @@ export default function HeroSection() {
           Your work, everywhere you are
             {/* Yellow Brush Stroke */}
             <div>
-              <img src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+              <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
             </div>
           </span>
         </h1>

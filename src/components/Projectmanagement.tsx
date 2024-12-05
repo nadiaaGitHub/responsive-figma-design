@@ -1,4 +1,5 @@
-
+import React from 'react'
+import Image from 'next/image';
 
 export default function ProjectManagement() {
   return (
@@ -12,7 +13,7 @@ export default function ProjectManagement() {
             Management
             {/* Yellow Brush Stroke */}
             <div>
-      <img src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+      <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
     </div>
           </span>
           <span/>
@@ -33,7 +34,7 @@ export default function ProjectManagement() {
 
       {/* Right Placeholder Box */}
       <div className="md:w-1/2 mt-8 md:mt-0">
-          <img
+          <Image
             src="/images/Image-container.png" 
             alt="Hero Image"
             className="w-full h-auto max-w-md mx-auto md:ml-8 shadow-xl"

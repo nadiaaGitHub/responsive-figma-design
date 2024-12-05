@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 
-export default function PricingPlans() {
+export default function Plan() {
   return (
     <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
@@ -12,7 +13,7 @@ export default function PricingPlans() {
             Choose Your Plans
             {/* Yellow Brush Stroke */}
             <div>
-      <img src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+      <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
     </div>
           </span>
           <span/>

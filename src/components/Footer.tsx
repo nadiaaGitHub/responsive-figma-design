@@ -1,3 +1,5 @@
+import React from 'react'
+import Image from 'next/image';
 export default function Footer() {
     return (
       <footer className="bg-[#003366] text-white py-12">
@@ -17,9 +19,9 @@ export default function Footer() {
   
             {/* Logos Section */}
             <div className="flex flex-wrap justify-center items-center mt-6 space-x-4 md:space-x-6">
-              <img src="/images/apple-black-logo 2.png" alt="Apple" className="w-8 h-8 md:w-10 md:h-10" />
-              <img src="/images/window.png" alt="Windows" className="w-8 h-8 md:w-10 md:h-10" />
-              <img src="/images/Group.png" alt="Android" className="w-8 h-8 md:w-10 md:h-10" />
+              <Image src="/images/apple-black-logo 2.png" alt="Apple" className="w-8 h-8 md:w-10 md:h-10" />
+              <Image src="/images/window.png" alt="Windows" className="w-8 h-8 md:w-10 md:h-10" />
+              <Image src="/images/Group.png" alt="Android" className="w-8 h-8 md:w-10 md:h-10" />
             </div>
           </div>
   
@@ -28,7 +30,7 @@ export default function Footer() {
             {/* Branding */}
             <div className="space-y-4">
               <div className="flex items-center">
-                <img src="/images/Logo Icon.png" alt="Logo" className="w-8 h-8 mr-2" />
+                <Image src="/images/Logo Icon.png" alt="Logo" className="w-8 h-8 mr-2" />
                 <h3 className="text-xl font-bold">whitepace</h3>
               </div>
               <p className="text-sm text-gray-300">
@@ -122,13 +124,13 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex justify-center space-x-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-blue-400">
-                <img src="/images/Facebook.png" alt="Facebook" className="w-5 h-5" />
+                <Image src="/images/Facebook.png" alt="Facebook" className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-blue-400">
-                <img src="/images/Twitter.png" alt="Twitter" className="w-5 h-5" />
+                <Image src="/images/Twitter.png" alt="Twitter" className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-blue-400">
-                <img src="/images/Linkedin.png" alt="LinkedIn" className="w-5 h-5" />
+                <Image src="/images/Linkedin.png" alt="LinkedIn" className="w-5 h-5" />
               </a>
             </div>
   

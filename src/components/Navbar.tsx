@@ -1,6 +1,7 @@
 'use client';
-
+import React from 'react'
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -19,7 +20,7 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo with Icon */}
         <div className="flex items-center space-x-2">
-          <img src="/images/Logo Icon.png" alt="Logo Icon" className="w-6 h-6" />
+          <Image src="/images/Logo Icon.png" alt="Logo Icon" className="w-6 h-6" />
           <span className="text-2xl font-bold">Whitespace</span>
         </div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import Image from 'next/image';
 
-export default function () {
+export default function sponser() {
     return (
         <section className="py-16">
             <div className="max-w-7xl mx-auto px-4">
@@ -11,7 +12,7 @@ export default function () {
                             Our Sponsers
                             {/* Yellow Brush Stroke */}
                             <div>
-                                <img src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+                                <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
                             </div>
                         </span>
                     </h1>
@@ -19,10 +20,10 @@ export default function () {
             </div>
 
             <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 px-4 md:px-12 py-5">
-                <img src="/images/Apple.png" alt="Apple" />
-                <img src="/images/microsoft 1.png" alt="Microsoft" className="w-24 sm:w-32 md:w-40" />
-                <img src="/images/Slack_Technologies_Logo 1.png" alt="Slack" className="w-24 sm:w-32 md:w-40" />
-                <img src="/images/Google.png" alt="Google" className="w-24 sm:w-32 md:w-40" />
+                <Image src="/images/Apple.png" alt="Apple" />
+                <Image src="/images/microsoft 1.png" alt="Microsoft" className="w-24 sm:w-32 md:w-40" />
+                <Image src="/images/Slack_Technologies_Logo 1.png" alt="Slack" className="w-24 sm:w-32 md:w-40" />
+                <Image src="/images/Google.png" alt="Google" className="w-24 sm:w-32 md:w-40" />
             </div>
 
         </section>

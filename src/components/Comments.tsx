@@ -1,3 +1,5 @@
+import React from 'react'
+import Image from 'next/image';
 export default function Comments() {
     return (
       <section className="bg-gray-50 py-12 px-6">
@@ -10,7 +12,7 @@ export default function Comments() {
                         What Our Clients Says
                             {/* Yellow Brush Stroke */}
                             <div>
-                                <img src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+                                <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
                             </div>
                         </span>
                     </h1>
@@ -23,7 +25,7 @@ export default function Comments() {
             <div className="bg-white shadow-lg rounded-lg p-8 flex flex-col justify-between lg:w-1/3">
               {/* Quote Icon as Image */}
               <div className="mb-4">
-                <img
+                <Image
                   src="/images/Quote-blue.png"
                   alt="Quote Icon"
                   className="w-8 h-8"
@@ -37,7 +39,7 @@ export default function Comments() {
               <hr className="my-6 border-gray-300" />
               {/* Profile */}
               <div className="flex items-center space-x-4">
-                <img
+                <Image
                   src="/images/Avater-1.png"
                   alt="Client 1"
                   className="w-12 h-12 rounded-full"
@@ -55,7 +57,7 @@ export default function Comments() {
             <div className="bg-blue-400 shadow-lg rounded-lg p-8 flex flex-col justify-between lg:w-1/3">
               {/* Quote Icon as Image */}
               <div className="mb-4">
-                <img
+                <Image
                   src="/images/Quote-white.png" 
                   alt="Quote Icon"
                   className="w-8 h-8"
@@ -69,7 +71,7 @@ export default function Comments() {
               <hr className="my-6 border-gray-300" />
               {/* Profile */}
               <div className="flex items-center space-x-4">
-                <img
+                <Image
                   src="/images/Avater-2.png"
                   alt="Client 2"
                   className="w-12 h-12 rounded-full"
@@ -87,7 +89,7 @@ export default function Comments() {
             <div className="bg-blue-400 shadow-lg rounded-lg p-8 flex flex-col justify-between lg:w-1/3">
               {/* Quote Icon as Image */}
               <div className="mb-4">
-                <img
+                <Image
                   src="/images/Quote-white.png" 
                   alt="Quote Icon"
                   className="w-8 h-8"
@@ -101,7 +103,7 @@ export default function Comments() {
               <hr className="my-6 border-gray-300" />
               {/* Profile */}
               <div className="flex items-center space-x-4">
-                <img
+                <Image
                   src="/images/Avater-3.png"
                   alt="Client 3"
                   className="w-12 h-12 rounded-full"
