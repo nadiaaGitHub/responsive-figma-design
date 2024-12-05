@@ -1,18 +1,25 @@
 'use client';
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 export default function Navbar() {
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  // Define state with explicit type
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (menuName:any) => {
+  const toggleDropdown = (menuName: string) => {
+    // Close the dropdown if clicked again, or open the clicked menu
     setActiveDropdown(activeDropdown === menuName ? null : menuName);
   };
 
   const toggleMobileMenu = () => {
+    // Toggle mobile menu open/close
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    // Close mobile menu when a menu item is clicked
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -20,17 +27,22 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo with Icon */}
         <div className="flex items-center space-x-2">
-          <Image src="/images/Logo Icon.png" alt="Logo Icon" className="w-6 h-6" />
+          <Image src="/images/Logo Icon.png" 
+          alt="Logo Icon" 
+          width={24} 
+          height={24} 
+          />
           <span className="text-2xl font-bold">Whitespace</span>
         </div>
 
         {/* Desktop and Tablet Nav Links */}
         <nav className="hidden md:flex space-x-8 font-medium">
-          {["Products", "Solutions", "Resources", "Pricing"].map((menu) => (
+          {['Products', 'Solutions', 'Resources', 'Pricing'].map((menu) => (
             <div className="relative group" key={menu}>
               <button
                 onClick={() => toggleDropdown(menu.toLowerCase())}
                 className="flex items-center space-x-1 hover:underline focus:outline-none"
+                aria-expanded={activeDropdown === menu.toLowerCase() ? 'true' : 'false'}
               >
                 <span>{menu}</span>
                 <svg
@@ -78,7 +90,7 @@ export default function Navbar() {
 
         {/* Hamburger Icon for Mobile (Visible on small screens) */}
         <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
+          <button onClick={toggleMobileMenu} className="text-white focus:outline-none" aria-expanded={isMobileMenuOpen ? 'true' : 'false'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -100,11 +112,12 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-blue-800 text-white px-6 py-4 space-y-4">
-          {["Products", "Solutions", "Resources", "Pricing"].map((menu) => (
+          {['Products', 'Solutions', 'Resources', 'Pricing'].map((menu) => (
             <div key={menu}>
               <button
                 onClick={() => toggleDropdown(menu.toLowerCase())}
                 className="flex justify-between items-center w-full focus:outline-none"
+                aria-expanded={activeDropdown === menu.toLowerCase() ? 'true' : 'false'}
               >
                 <span>{menu}</span>
                 <svg
@@ -138,10 +151,10 @@ export default function Navbar() {
             </div>
           ))}
 
-          <button className="block text-blue-900 bg-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-300 w-full">
+          <button className="block text-blue-900 bg-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-300 w-full" onClick={closeMobileMenu}>
             Login
           </button>
-          <button className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full">
+          <button className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full" onClick={closeMobileMenu}>
             Try Whitespace free →
           </button>
         </div>

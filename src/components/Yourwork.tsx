@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function yourwork() {
+export default function YourWork() {
   return (
     <section className="relative bg-blue-800 py-20 text-white">
       {/* Background pattern */}
@@ -19,20 +19,27 @@ export default function yourwork() {
         </svg>
       </div>
 
+      {/* Main content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight relative">
           <span className="relative inline-block">
-          Your work, everywhere you are
+            Your work, everywhere you are
             {/* Yellow Brush Stroke */}
-            <div>
-              <Image src="/brush-stroke.png" alt="Brush Stroke" className="w-64" />
+            <div className="absolute left-3/4 transform -translate-x-1/2 bottom-[-25px]  z-0">
+              <Image
+                src="/brush-stroke.png"
+                alt="Brush Stroke"
+                width={256} // Adjust width
+                height={64} // Adjust height
+                className="w-64"
+              />
             </div>
           </span>
         </h1>
 
         {/* Subheading */}
-        <p className="mt-4 text-lg">
+        <p className="mt-4 text-lg md:text-xl">
           Access your notes from your computer, phone, or tablet by synchronizing
           with various services, including Whitepace, Dropbox, and OneDrive. The app
           is available on Windows, macOS, Linux, Android, and iOS. A terminal app is
